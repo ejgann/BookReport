@@ -1,0 +1,26 @@
+Desired Functionality
+
+
+User
+    - see all of a user's reviews
+
+
+Review
+    - edit/update and delete review
+    - link to book 
+    
+
+
+Book
+    - add link to write a review of book
+    - add a "description" field when adding a new book
+
+
+
+Misc
+    - add validations and validation errors
+    - incorporate 1 class-leve ActiveRecord scope method (AR query methods)
+    - third-party authentication
+    - add error messages
+    - consider where/if any helper methods or partials are necessary
+    * add a list feature ??
