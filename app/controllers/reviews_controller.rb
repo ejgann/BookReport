@@ -1,7 +1,12 @@
 class ReviewsController < ApplicationController
 
     def index
+        # if there is a nested route and the user exists
+        if params[:user_id] && @user = User.find_by_id(params[:user_id])
+            @reviews = @user.reviews 
+        else
         @reviews = Review.all
+        end
     end
 
     def new
