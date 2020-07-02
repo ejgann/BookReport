@@ -7,13 +7,14 @@ User
 
 Review
     - edit/update and delete review
-    - link to book 
+    - As part of new review form -- Create a dropdown of all the signed-in user's books for which they will be writing the review, which will have a text area next to the selected dropdown book option
     
 
 
 Book
     - add link to write a review of book
     - add a "description" field when adding a new book
+    [@] Books are not being associated with a single user ("All Books" appears as same for any user, whether new or not)
 
 
 

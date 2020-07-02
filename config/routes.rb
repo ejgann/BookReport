@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   resources :users do
       resources :reviews, shallow: true
     end
-  resources :books 
+  resources :books do
+      resources :reviews, shallow: true
+    end
   resources :reviews
 
 end
