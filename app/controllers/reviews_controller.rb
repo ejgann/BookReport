@@ -11,7 +11,6 @@ class ReviewsController < ApplicationController
     end
 
     def new
-        # if it's nested and if the user is found
         if params[:book_id] && @book = Book.find_by_id(params[:book_id])
             @review = @book.reviews.build
         else

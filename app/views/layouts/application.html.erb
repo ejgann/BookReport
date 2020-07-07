@@ -12,10 +12,9 @@
   <body>
     <div>
       <% if logged_in? %>
-      <%= link_to 'New Review', new_book_review_path %>  |  
-      <%= link_to 'All Reviews', book_reviews_path %>  |
+       
       <%= link_to 'Add a Book', new_book_path %>  |  
-      <%= link_to 'All Books', books_path %>
+      <%= link_to 'All Books', books_path %>  |  
       <%= link_to "Logout", logout_path, method: 'delete' %>
       <% else %>
       <%= link_to "Sign Up", signup_path %>
