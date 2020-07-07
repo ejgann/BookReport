@@ -1,8 +1,12 @@
 <h1>All of <%= current_user.username %>'s Book Reviews</h1>
 
-<%= @reviews.each do |review| %>
-<%= review.title %>
-<%= review.rating %>
-<%= review.comment %>
-
+    <div>
+    <% current_user.reviews.each do |review| %>
+    <li><%= review.title %><br>
+    <%= review.rating %><br>
+    <%= review.comment %><br>
+    <%= link_to 'Read full review', review_path %>
+    </li>
+    </div>
 <% end %>
+

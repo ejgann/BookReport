@@ -1,12 +1,12 @@
 <h1>Write a Review</h1>
 
 <%= form_for(@review) do |f| %>
-<%= f.label :title%>
+<%= f.label :title %>
 <%= f.text_field :title %>
 <br>
 <br>
 <%= f.label :rating %>
-<%= f.number_field :rating %> (1 = hated it, 5 = loved it)
+<%= f.number_field :rating %> (1 = disliked it, 5 = loved it)
 <br>
 <br>
 <%= f.label :comment %>
