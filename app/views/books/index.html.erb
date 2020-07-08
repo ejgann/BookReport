@@ -2,6 +2,9 @@
 
     <div>
         <% @books.each do |book| %>
-        <li><%= link_to book.title, book_path(book) %> by: <%= book.author %>   |   <%= link_to 'Write a Review', new_review_path %></li>
+        <li><%= link_to book.title, book_path(book) %> by: <%= book.author %></li>
+        <% end %>
+    
     </div>
-<% end %>
+
+

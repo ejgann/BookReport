@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
     
     def index
-        # if a review is nested and the user exists
         if params[:user_id] && @user = User.find_by_id(params[:user_id])
             @reviews = @user.reviews 
         else
