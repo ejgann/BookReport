@@ -1,12 +1,13 @@
 <h1>All Reviews</h1>
 
     <div>
-    <% current_user.reviews.each do |review| %>
+    <% @reviews.each do |review| %>
     <li><%= review.title %><br>
-    <%= review.rating %><br>
-    <%= review.comment %><br>
-    <%= link_to 'Read full review', review_path %>
+    User: <%= review.user.username %>     |
+    Rating: <%= review.rating %>     |     
+    Comments: "<%= review.comment %>"<br>
     </li>
     </div>
 <% end %>
 
+<h3>*** Need to figure out how to list only the reviews for a specific book (currently lists all reviews for all books)</h3>
