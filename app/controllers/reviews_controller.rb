@@ -1,29 +1,26 @@
 class ReviewsController < ApplicationController
     
     def index
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @reviews = @user.reviews 
-        else
-            @error = "That review doesn't exist" if params[:user_id]
-            @reviews = Review.all
-        end
+        @reviews = Review.all
     end
 
     def new
-        if params[:book_id] && @book = Book.find_by_id(params[:book_id])
-            @review = @book.reviews.build
-        else
-            @error = "There is no such book" if params[:book_id]
-        @review = Review.new
-        end
+        # # if the book exists in database and can be found by its id, then associate it with the book
+        # if params[:book_id] && @book = Book.find_by_id(params[:book_id])
+        #     @review = @book.reviews.build
+        # # otherwise create a new independent review
+        # else
+         @review = Review.new
+        # end
     end
     
     def create
-        @review = current_user.reviews.build(review_params)
-        if @review.save
-            redirect_to book_reviews_path
-        else
-            render :new
+        @book = Book.find_by_id(book_id: params[:book_id])
+    @review = @book.reviews.build(review_params)
+    if @review.save
+        redirect_to @review
+    else
+        render :new
         end
     end
 
